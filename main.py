@@ -38,9 +38,9 @@ ska = Skafos()
 
 # Fetch movie data and write to cassandra using the Skafos Data Engine
 ingest_log = get_logger('movie-fetch')
-daily_movie_update = MovieData(api_key, batch_size=n, backfilled_days=bd, file_date=fd).fetch(skafos=ska, filter_pop=pop)
+daily_movie_update = MovieData(api_key, log=ingest_log, batch_size=n, backfilled_days=bd, file_date=fd).fetch(skafos=ska, filter_pop=pop)
 
 print("Now going to get info", flush=True)
 # Fetch additional movie info data for all new movies and write to cassandra using the Skafos Data Engine
 info_log = get_logger('movie-info')
-movie_info = MovieInfo(api_key, batch_size=n).fetch(skafos=ska)
+movie_info = MovieInfo(api_key, log=info_log, batch_size=n).fetch(skafos=ska)
