@@ -12,7 +12,7 @@ if 'MOVIE_DB' in os.environ:
 else:
   sys.exit('Please save a movie database api key in your environment.')
 
-# Any movie with a popularity score lower than 15 is likely irrelevant
+# Any movie with a popularity score lower than 15 is likely irrelevant!
 if 'POPULARITY' in os.environ:
   pop = int(os.environ['POPULARITY'])
 else:
