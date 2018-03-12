@@ -51,3 +51,4 @@ Only one is required and the others are optional. See below for details.
 ## Deployment
 Once the steps are completed above, the user has deployed their movie data ingester. To check the status of the build or job run `skafos logs --tail` to see realtime updates.
 
+
